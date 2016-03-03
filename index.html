@@ -172,6 +172,104 @@
           
           
             
+              <a class="post-title-link" href="/2016/03/03/数据存储及位运算/" itemprop="url">
+                数据存储及位运算
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-03-03T15:00:38+08:00" content="2016-03-03">
+            2016-03-03
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/计算机/" itemprop="url" rel="index">
+                  <span itemprop="name">-计算机</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/03/03/数据存储及位运算/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/03/数据存储及位运算/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>数值在计算机中是以二进制的形式存储，如下32位数值：<br><blockquote><p>正数: 8</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+
+<p>负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原码：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">反码: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">0111</span></span><br><span class="line">补码：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">0111</span> + <span class="number">1</span></span><br><span class="line">结果：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+
+<p>位左移（&lt;&lt;）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &lt;&lt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">左移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span> <span class="number">0000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &lt;&lt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">左移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span> <span class="number">0000</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &lt;&lt; <span class="number">2</span>); <span class="comment">//结果为32</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &lt;&lt; <span class="number">2</span>); <span class="comment">//结果为-32</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>位右移（&gt;&gt;）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>无符号右移运算（&gt;&gt;&gt;）<br>i&gt;&gt;&gt;n表示i对应二进制数右移n位，其中，右边n个低位被丢弃，不管正负数左边n个高位由0填充。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0011</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为1073741822</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></p>
+<p>对于数值进行与2的幂次方的乘法与除法运算时，位运算的效率会优于乘除的运算。</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/12/03/Node简介/" itemprop="url">
                 Node的优势
               </a>
@@ -232,109 +330,9 @@
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">data</span> = mysql_query<span class="container">&#123;’<span class="type">SECLECT</span> * <span class="type">FROM</span> <span class="title">table’</span>&#125;</span>;</span></span><br><span class="line"><span class="title">deal</span>(<span class="typedef"><span class="keyword">data</span>)  //在数据库查询完成之前程序，不会继续执行</span></span><br></pre></td></tr></table></figure>
 
 <p>Node的方式：</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。<br>其实像Java和PHP也可以实现个事件管理器来达到异步的机制，改天试着实现下</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
 </blockquote>
 </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/10/14/code/" itemprop="url">
-                代码规范
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-10-14T23:00:00+08:00" content="2015-10-14">
-            2015-10-14
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/code/" itemprop="url" rel="index">
-                  <span itemprop="name">-code</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/10/14/code/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/14/code/" itemprop="commentsCount"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>IT虽然没有建筑学，金融那样悠久的历史，但作为社会工程一个新的分支，依然需要严谨的思<br>维方式。这种严谨的方式最直观的就体现在代码规范上。</p>
-<p>软件项目一般都是团队开发，如果没有一套统一的代码规范，到了后期，项目就会看上去比较<br>杂乱。所以比较好的公司，一进去并不是让你立刻写代码或熟悉业务流程，而是先发一份代码<br>规范给你。</p>
-<p>笔者因为之前接手过别人项目，体会过由于无代码规范所带来的那种烦躁心理，所以记录下代<br>码编写时需要注意的规范问题。</p>
-<h2 id="一：代码格式">一：代码格式</h2><blockquote><p>1：类格式<br>类里面 公有方法，私有方法，私有成员变量，公有成员变量，静态公有方法，静态私有成员，静态公有成员，枚举类型等的一些格式定义。</p>
-<p>2：大括号最好独占一行，并且if，for，do，while等条件语句的执行体无论多少局，最好都加上{}。<br>建议：<br> <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (check())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>不建议：</p>
-<p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (check())&#123;</span><br><span class="line">　　<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;<span class="keyword">else</span></span><br><span class="line">　　<span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure><br>3：空格的使用<br>逗号、分号只在后面加空格。如下：</p>
-<p><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">int</span> a, <span class="keyword">b, </span>c<span class="comment">;</span></span><br></pre></td></tr></table></figure><br>比较操作符，赋值操作符“=”、“+=”，算术操作符“+”，“%”，逻辑操作符“&amp;&amp;”，“&amp;”，位域操作符“&lt;&lt;”、“^”等双目操作符的前后加空格。如下：</p>
-<p><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">a</span> &gt;= b)<span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> = b + c<span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> *= <span class="number">2</span><span class="comment">;</span></span><br><span class="line"><span class="literal">a</span> = b ^ <span class="number">2</span><span class="comment">;</span></span><br></pre></td></tr></table></figure><br>if，for，while，switch等与后面的括号间应加空格，使这些关键字更为突出，明显。</p>
-<p><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="comment">(a &gt;= b &amp;&amp; c &gt; d)</span>;</span><br></pre></td></tr></table></figure><br>４：空行的使用<br>相关逻辑代码行之间可不加空行，不同逻辑或者没有关系的代码行之间必须加空行：</p>
-<p><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">func</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">　　<span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">    doSomeThingA();</span><br><span class="line"></span><br><span class="line">    doSomeThingB();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>多个函数之间须添加空行，getter/setter函数之间可不加，保持紧凑。</p>
-</blockquote>
-<h2 id="二：归一化">二：归一化</h2><blockquote><p>代码上下文一致性<br>尽量保持修改点上下代码命名规则、格式、逻辑上下文的一致性，要求多人维护的代码，看起来像一个人写的一样;</p>
-<p>每个方法体最好不要超过30行。</p>
-<p>不同作用域的命名：<br>1.包名：一个功能性单词，全部小写。<br>2.类名： 一个或者多个单词组成，每个单词第一个字母大写ClassName。<br>3.接口名：I+一个或者多个单词，IPanel。<br>4.成员变量：一个或者多个单词组成，每个单词第一个字母小写name。<br>5.功能性函数名：动词+名词，首字母小写，其它单词首字母大写，changeValue, updateData。<br>6.函数体内局部变量：int i = 0;  int x = 0;<br>7.事件处理函数：on+名+动(时态) onValueChanged。<br>8.回调函数成员变量：动词+handler，actionHandler。</p>
-<p>常用前后缀及使用场景：<br>is: Boolean型状态或函数 isAdded()。<br>has: Boolean型状态或函数，hasChanged()。<br>do: 间隔调用行为函数，doUpdate()。<br>delay: 延时调用行为函数，delayCheckData()。<br>handler: 回调函数变量后缀，actionHandler()。<br>utils: 静态工具类后缀，StringUtils。<br>check: 检查密集的函数前缀，checkGuideTask()。<br>from: 反序列化函数前缀，fromBytes(), fromJSONObject()。<br>to: 序列化函数前缀，toBytes(), toJSONObject(), toXML(), toString()。<br>ble: 可…的，如：movable()，removable()。</p>
-</blockquote>
-<h2 id="三：注释">三：注释</h2><blockquote><p>一般情况，源程序的有效注释量需达到30%，但注释的文字提倡精简话。<br>在多人协作开发时，文件的注释特别重要。</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword"><em></em></span></span><br><span class="line"> <span class="keyword"></span> 文件名：</span><br><span class="line"> <span class="keyword"><em></em></span> 版权：</span><br><span class="line"> <span class="keyword"></span> 描述：</span><br><span class="line"> <span class="keyword"><em></em></span> 创建者：</span><br><span class="line"> <span class="keyword"></span> 创建时间：</span><br><span class="line"> <span class="keyword"><em></em></span> 修改人：</span><br><span class="line"> <span class="keyword"></span> 修改时间：</span><br><span class="line"> <span class="keyword"><em></em></span> 修改版本号：</span><br><span class="line"> <span class="keyword"></span> 修改内容：…..</span><br><span class="line"><span class="keyword">*</span>/</span><br></pre></td></tr></table></figure></blockquote></span>
         
       
     </div>
@@ -385,8 +383,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/多媒体/" itemprop="url" rel="index">
-                  <span itemprop="name">-多媒体</span>
+                <a href="/categories/计算机/" itemprop="url" rel="index">
+                  <span itemprop="name">-计算机</span>
                 </a>
               </span>
 
@@ -480,7 +478,7 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -521,7 +519,7 @@
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>

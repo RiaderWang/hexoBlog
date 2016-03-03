@@ -47,7 +47,7 @@ Node采用基于">
 <meta property="og:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
 与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。
 Node采用基于">
-<meta property="og:updated_time" content="2015-12-04T09:21:14.867Z">
+<meta property="og:updated_time" content="2016-03-03T06:44:46.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node的优势">
 <meta name="twitter:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
@@ -234,7 +234,7 @@ Node采用基于">
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">data</span> = mysql_query<span class="container">&#123;’<span class="type">SECLECT</span> * <span class="type">FROM</span> <span class="title">table’</span>&#125;</span>;</span></span><br><span class="line"><span class="title">deal</span>(<span class="typedef"><span class="keyword">data</span>)  //在数据库查询完成之前程序，不会继续执行</span></span><br></pre></td></tr></table></figure>
 
 <p>Node的方式：</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。<br>其实像Java和PHP也可以实现个事件管理器来达到异步的机制，改天试着实现下</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
 </blockquote>
 </span>
       
@@ -253,11 +253,13 @@ Node采用基于">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/03/03/数据存储及位运算/" rel="prev">数据存储及位运算</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/14/code/" rel="next">代码规范</a>
+              <a href="/2015/09/17/first/" rel="next">音频，视频</a>
             
           </div>
         </div>
@@ -330,7 +332,7 @@ Node采用基于">
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
@@ -382,7 +384,7 @@ Node采用基于">
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp; 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
