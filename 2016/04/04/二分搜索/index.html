@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="-数据," />
+  <meta name="keywords" content="-算法," />
 
 
 
@@ -37,28 +37,23 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
+<meta name="description" content="二分搜索用于在集合中查找特定的值，例如对于增序的数组，我们需要查看某个key，可以将原数组一分为二，在分解的两个子数组查找key值，依次递归分解，查找。
+代码实现：
+123456789101112131415161718192021/* 二分搜索关键字 param key: 关键字 parma arr: 目标数组，增序*/public static int binarySearch(int key">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据存储及位运算">
-<meta property="og:url" content="http://yoursite.com/2016/03/03/数据存储及位运算/index.html">
+<meta property="og:title" content="二分搜索">
+<meta property="og:url" content="http://yoursite.com/2016/04/04/二分搜索/index.html">
 <meta property="og:site_name" content="Riader' blog">
-<meta property="og:description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
-<meta property="og:updated_time" content="2016-03-03T08:17:14.032Z">
+<meta property="og:description" content="二分搜索用于在集合中查找特定的值，例如对于增序的数组，我们需要查看某个key，可以将原数组一分为二，在分解的两个子数组查找key值，依次递归分解，查找。
+代码实现：
+123456789101112131415161718192021/* 二分搜索关键字 param key: 关键字 parma arr: 目标数组，增序*/public static int binarySearch(int key">
+<meta property="og:image" content="http://yoursite.com/images/2.png">
+<meta property="og:updated_time" content="2016-04-04T10:49:52.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据存储及位运算">
-<meta name="twitter:description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
+<meta name="twitter:title" content="二分搜索">
+<meta name="twitter:description" content="二分搜索用于在集合中查找特定的值，例如对于增序的数组，我们需要查看某个key，可以将原数组一分为二，在分解的两个子数组查找key值，依次递归分解，查找。
+代码实现：
+123456789101112131415161718192021/* 二分搜索关键字 param key: 关键字 parma arr: 目标数组，增序*/public static int binarySearch(int key">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -68,7 +63,7 @@
   };
 </script>
 
-  <title> 数据存储及位运算 | Riader' blog </title>
+  <title> 二分搜索 | Riader' blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -183,7 +178,7 @@
           
           
             
-              数据存储及位运算
+              二分搜索
             
           
         </h1>
@@ -192,8 +187,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-03-03T15:00:38+08:00" content="2016-03-03">
-            2016-03-03
+          <time itemprop="dateCreated" datetime="2016-04-04T17:00:38+08:00" content="2016-04-04">
+            2016-04-04
           </time>
         </span>
 
@@ -202,8 +197,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/计算机/" itemprop="url" rel="index">
-                  <span itemprop="name">-计算机</span>
+                <a href="/categories/算法/" itemprop="url" rel="index">
+                  <span itemprop="name">-算法</span>
                 </a>
               </span>
 
@@ -218,8 +213,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2016/03/03/数据存储及位运算/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/03/数据存储及位运算/" itemprop="commentsCount"></span>
+            <a href="/2016/04/04/二分搜索/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/04/04/二分搜索/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -233,21 +228,13 @@
       
 
       
-        <span itemprop="articleBody"><p>数值在计算机中是以二进制的形式存储，如下32位数值：<br><blockquote><p>正数: 8</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p>二分搜索用于在集合中查找特定的值，例如对于增序的数组，我们需要查看某个key，可以<br>将原数组一分为二，在分解的两个子数组查找key值，依次递归分解，查找。</p>
+<blockquote><p>代码实现：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<em>*</em></span><br><span class="line"> 二分搜索关键字</span><br><span class="line"><em> param key: 关键字</em></span><br><span class="line"> parma arr: 目标数组，增序</span><br><span class="line">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span>[] arr)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> high = arr.length - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(low &lt;= high)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = low + (high - low)/<span class="number">2</span>; <span class="comment">//分解的中间点</span></span><br><span class="line">        <span class="keyword">if</span>(key &lt; arr[mid])</span><br><span class="line">            high = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key &gt; arr[mid])</span><br><span class="line">            low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">原码：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">反码: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">0111</span></span><br><span class="line">补码：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">0111</span> + <span class="number">1</span></span><br><span class="line">结果：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
-
-<p>位左移（&lt;&lt;）</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &lt;&lt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">左移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span> <span class="number">0000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &lt;&lt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">左移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span> <span class="number">0000</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &lt;&lt; <span class="number">2</span>); <span class="comment">//结果为32</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &lt;&lt; <span class="number">2</span>); <span class="comment">//结果为-32</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>位右移（&gt;&gt;）</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>无符号右移运算（&gt;&gt;&gt;）<br>i&gt;&gt;&gt;n表示i对应二进制数右移n位，其中，右边n个低位被丢弃，不管正负数左边n个高位由0填充。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0011</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为1073741822</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></p>
-<p>对于数值进行与2的幂次方的乘法与除法运算时，位运算的效率会优于乘除的运算。</p>
+<p>单元测试</p>
+<p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">int</span> b[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] = i;</span><br><span class="line">        b[i] = i*<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;b.length; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(algsUtil.binarySearch(b[j], a) != -<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(b[j]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>该测试单元初始化了两个数组a,b。通过二分搜索来查找a，b中共有的元素并打印出来<br><img src="/images/2.png" alt="打印结果"></p>
+</blockquote>
 </span>
       
     </div>
@@ -256,7 +243,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据/" rel="tag">#-数据</a>
+            <a href="/tags/算法/" rel="tag">#-算法</a>
           
         </div>
       
@@ -265,13 +252,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/04/04/二分搜索/" rel="prev">二分搜索</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/03/Node简介/" rel="next">Node的优势</a>
+              <a href="/2016/03/03/数据存储及位运算/" rel="next">数据存储及位运算</a>
             
           </div>
         </div>
@@ -433,9 +418,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'binabccom';
-      var disqus_identifier = '2016/03/03/数据存储及位运算/';
-      var disqus_title = '数据存储及位运算';
-      var disqus_url = 'http://yoursite.com/2016/03/03/数据存储及位运算/';
+      var disqus_identifier = '2016/04/04/二分搜索/';
+      var disqus_title = '二分搜索';
+      var disqus_url = 'http://yoursite.com/2016/04/04/二分搜索/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
