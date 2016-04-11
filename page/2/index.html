@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="-数据," />
+  <meta name="keywords" content="Hexo,next" />
 
 
 
@@ -37,28 +37,15 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据存储及位运算">
-<meta property="og:url" content="http://yoursite.com/2016/03/03/数据存储及位运算/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riader' blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Riader' blog">
-<meta property="og:description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
-<meta property="og:updated_time" content="2016-03-03T08:17:14.032Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据存储及位运算">
-<meta name="twitter:description" content="数值在计算机中是以二进制的形式存储，如下32位数值：正数: 8
-1二进制: 0000 0000 0000 0000 0000 0000 0000 1000
-
-负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）
-1234原码：0000 0000 0000 0000 0000 0000 0000 1000反码: 1111 1111 1111 1111 1111 1111 111">
+<meta name="twitter:title" content="Riader' blog">
+<meta name="twitter:description">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -68,7 +55,7 @@
   };
 </script>
 
-  <title> 数据存储及位运算 | Riader' blog </title>
+  <title> Riader' blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -86,7 +73,9 @@
 
 
 
-  <div class="container one-column page-post-detail">
+  <div class="container one-column 
+   page-home 
+">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -170,9 +159,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -183,7 +172,9 @@
           
           
             
-              数据存储及位运算
+              <a class="post-title-link" href="/2016/03/03/数据存储及位运算/" itemprop="url">
+                数据存储及位运算
+              </a>
             
           
         </h1>
@@ -233,7 +224,8 @@
       
 
       
-        <span itemprop="articleBody"><p>数值在计算机中是以二进制的形式存储，如下32位数值：<br><blockquote><p>正数: 8</p>
+        
+          <span itemprop="articleBody"><p>数值在计算机中是以二进制的形式存储，如下32位数值：<br><blockquote><p>正数: 8</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
 
 <p>负数：-8（负数的表示需要先取到原码8，再计算反码，最后反码+1计算补码）</p>
@@ -249,58 +241,213 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0000</span> <span class="number">0010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//比如-8 &gt;&gt;&gt; 2</span></span><br><span class="line">二进制: <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1000</span></span><br><span class="line">右移两位：<span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line">高位补<span class="number">0</span>： <span class="number">0011</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1111</span> <span class="number">1110</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    System.out.println(<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为2</span></span><br><span class="line">    System.out.println(-<span class="number">8</span> &gt;&gt;&gt; <span class="number">2</span>); <span class="comment">//结果为1073741822</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></p>
 <p>对于数值进行与2的幂次方的乘法与除法运算时，位运算的效率会优于乘除的运算。</p>
 </span>
+        
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/数据/" rel="tag">#-数据</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/04/二分搜索/" rel="prev">二分搜索</a>
-            
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/12/03/Node简介/" rel="next">Node的优势</a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/12/03/Node简介/" itemprop="url">
+                Node的优势
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-12-03T20:27:38+08:00" content="2015-12-03">
+            2015-12-03
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Node学习/" itemprop="url" rel="index">
+                  <span itemprop="name">-Node学习</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/12/03/Node简介/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/03/Node简介/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，<br>其基于Google Chrome的V8引擎，作用于服务器的解决方案。</p>
+<p>与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字<br>节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性<br>外，但执行性能上应该要比java好。</p>
+<blockquote><p>Node采用基于异步I/O的事件轮询，这种方式有点像GUI编程（界面编程）的事件机制，只有<br>当你点击某个控件时，才能触发相应的事件方法。假如现在有某个控件的事件处理方法因为数<br>据的加载或其他原因而延迟执行了，这时你点击另外一个控件，相对应的事件方法依然会执<br>行，而不会等待前一个事件方法执行完再执行。</p>
+<p>《Node.js实战》一书中有如下解释<br>如一条查询数据库的I/O操作，一般PHP是这样的方式：</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">data</span> = mysql_query<span class="container">&#123;’<span class="type">SECLECT</span> * <span class="type">FROM</span> <span class="title">table’</span>&#125;</span>;</span></span><br><span class="line"><span class="title">deal</span>(<span class="typedef"><span class="keyword">data</span>)  //在数据库查询完成之前程序，不会继续执行</span></span><br></pre></td></tr></table></figure>
+
+<p>Node的方式：</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
+</blockquote>
+</span>
+        
       
     </div>
-  </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/17/first/" itemprop="url">
+                音频，视频
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-17T15:00:38+08:00" content="2015-09-17">
+            2015-09-17
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/计算机/" itemprop="url" rel="index">
+                  <span itemprop="name">-计算机</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/09/17/first/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/09/17/first/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>视频编码格式：H.264、Theora（免费）、VP8（google开源免费）。<br>音频编码格式：ACC、MP3、Vorbis（开源免费无专利）。</p>
+<p>HTML5支持的视频格式：<br>Ogg = Theora视频编码+Vorbis音频编码的Ogg文件。（支持的浏览器：F，C，O）<br>MEPG4（MP4） = H.264视频编码+ACC音频编码的MPEG4文件。（支持的浏览器：S，C）<br>WebM = VP8视频编码+Vorbis音频编码的WebM文件。（支持的浏览器：I，F，C，O）</p>
+<p>下面这篇博文有更详细的介绍.<br><a href="http://www.cnblogs.com/P_Chou/p/html5-video.html" target="_blank" rel="external">http://www.cnblogs.com/P_Chou/p/html5-video.html</a></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
  </div>
 
         
 
-        
-          <div class="comments" id="comments">
-            
-              <div id="disqus_thread">
-                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-              </div>
-            
-          </div>
         
       </div>
 
@@ -317,15 +464,6 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
       
 
       <section class="site-overview">
@@ -373,17 +511,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
-          <div class="post-toc">
-            
-            
-              <p class="post-toc-empty">此文章未包含目录</p>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </section>
       
 
     </div>
@@ -433,9 +560,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'binabccom';
-      var disqus_identifier = '2016/03/03/数据存储及位运算/';
-      var disqus_title = '数据存储及位运算';
-      var disqus_url = 'http://yoursite.com/2016/03/03/数据存储及位运算/';
+      var disqus_identifier = 'page/2/index.html';
+      var disqus_title = '';
+      var disqus_url = '';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -446,8 +573,6 @@
       }
 
       run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
       
     </script>
   
@@ -474,165 +599,6 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
-  });
-</script>
-
-
 
   <script type="text/javascript">
     $(document).ready(function () {
