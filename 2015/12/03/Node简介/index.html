@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="Riader' blog">
 <meta property="og:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
 与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。">
-<meta property="og:updated_time" content="2016-04-12T13:36:37.825Z">
+<meta property="og:updated_time" content="2016-04-13T13:52:59.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node的优势">
 <meta name="twitter:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
@@ -328,13 +328,13 @@
       
 
       
-        <p>随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，<br>其基于Google Chrome的V8引擎，作用于服务器的解决方案。</p>
-<p>与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字<br>节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性<br>外，但执行性能上应该要比java好。<br><a id="more"></a><br><blockquote><p>Node采用基于异步I/O的事件轮询，这种方式有点像GUI编程（界面编程）的事件机制，只有<br>当你点击某个控件时，才能触发相应的事件方法。假如现在有某个控件的事件处理方法因为数<br>据的加载或其他原因而延迟执行了，这时你点击另外一个控件，相对应的事件方法依然会执<br>行，而不会等待前一个事件方法执行完再执行。</p>
+        <p>随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。</p>
+<p>与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。<br><a id="more"></a><br><blockquote><p>Node采用基于异步I/O的事件轮询，这种方式有点像GUI编程（界面编程）的事件机制，只有当你点击某个控件时，才能触发相应的事件方法。假如现在有某个控件的事件处理方法因为数据的加载或其他原因而延迟执行了，这时你点击另外一个控件，相对应的事件方法依然会执行，而不会等待前一个事件方法执行完再执行。</p>
 <p>《Node.js实战》一书中有如下解释<br>如一条查询数据库的I/O操作，一般PHP是这样的方式：</p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">data</span> = mysql_query<span class="container">&#123;’<span class="type">SECLECT</span> * <span class="type">FROM</span> <span class="title">table’</span>&#125;</span>;</span></span><br><span class="line"><span class="title">deal</span>(<span class="typedef"><span class="keyword">data</span>)  //在数据库查询完成之前程序，不会继续执行</span></span><br></pre></td></tr></table></figure>
 
 <p>Node的方式：</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言<br>暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
 </blockquote></p>
 
       
@@ -450,7 +450,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -458,7 +458,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -467,7 +467,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
