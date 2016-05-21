@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="-NodeJS," />
+  <meta name="keywords" content="-算法," />
 
 
 
@@ -82,19 +82,16 @@
 
 
 
-<meta name="description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
-与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。">
+<meta name="description" content="排序算法作为最基本的算法设计，最能体现不同算法所带来的不同效率。不过，某些看似效率低的算法在一些特定问题上也会表示的较其他算法优秀。快速排序作为效率较好的排序算法，经常被用来做排序的设计。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node的优势">
-<meta property="og:url" content="http://yoursite.com/2015/12/03/Node简介/index.html">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://yoursite.com/2016/05/21/快速排序/index.html">
 <meta property="og:site_name" content="Riader' blog">
-<meta property="og:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
-与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。">
-<meta property="og:updated_time" content="2016-04-13T13:52:59.352Z">
+<meta property="og:description" content="排序算法作为最基本的算法设计，最能体现不同算法所带来的不同效率。不过，某些看似效率低的算法在一些特定问题上也会表示的较其他算法优秀。快速排序作为效率较好的排序算法，经常被用来做排序的设计。">
+<meta property="og:updated_time" content="2016-05-21T16:11:45.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node的优势">
-<meta name="twitter:description" content="随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。
-与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。">
+<meta name="twitter:title" content="快速排序">
+<meta name="twitter:description" content="排序算法作为最基本的算法设计，最能体现不同算法所带来的不同效率。不过，某些看似效率低的算法在一些特定问题上也会表示的较其他算法优秀。快速排序作为效率较好的排序算法，经常被用来做排序的设计。">
 
 
 
@@ -112,7 +109,7 @@
   };
 </script>
 
-  <title> Node的优势 | Riader' blog </title>
+  <title> 快速排序 | Riader' blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +259,7 @@
             
             
               
-                Node的优势
+                快速排序
               
             
           </h1>
@@ -274,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-03T20:27:38+08:00" content="2015-12-03">
-              2015-12-03
+            <time itemprop="dateCreated" datetime="2016-05-21T23:00:02+08:00" content="2016-05-21">
+              2016-05-21
             </time>
           </span>
 
@@ -288,8 +285,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Node学习/" itemprop="url" rel="index">
-                    <span itemprop="name">-Node学习</span>
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">-算法</span>
                   </a>
                 </span>
 
@@ -304,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/03/Node简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/Node简介/" itemprop="commentsCount"></span>
+                <a href="/2016/05/21/快速排序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/快速排序/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,14 +325,8 @@
       
 
       
-        <p>随着移动互联网的涌来，同时也伴随着越来越多的新技术和思潮的到来。Node就是其中之一，其基于Google Chrome的V8引擎，作用于服务器的解决方案。</p>
-<p>与传统的服务器静态语言Java/C#不同，node采用的是动态语言JavaScript，不用事先编译成字节码，V8引擎让其直接解释成本地机器码执行。如果除去静态语言强类型声明等所带来的稳定性外，但执行性能上应该要比java好。<br><a id="more"></a><br><blockquote><p>Node采用基于异步I/O的事件轮询，这种方式有点像GUI编程（界面编程）的事件机制，只有当你点击某个控件时，才能触发相应的事件方法。假如现在有某个控件的事件处理方法因为数据的加载或其他原因而延迟执行了，这时你点击另外一个控件，相对应的事件方法依然会执行，而不会等待前一个事件方法执行完再执行。</p>
-<p>《Node.js实战》一书中有如下解释<br>如一条查询数据库的I/O操作，一般PHP是这样的方式：</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">data</span> = mysql_query<span class="container">&#123;’<span class="type">SECLECT</span> * <span class="type">FROM</span> <span class="title">table’</span>&#125;</span>;</span></span><br><span class="line"><span class="title">deal</span>(<span class="typedef"><span class="keyword">data</span>)  //在数据库查询完成之前程序，不会继续执行</span></span><br></pre></td></tr></table></figure>
-
-<p>Node的方式：</p>
-<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql_query(<span class="string">‘SECLECT * FROM table’</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//脚本继续执行</span></span><br></pre></td></tr></table></figure><br>下面那段代码其实就是通过一个回调函数来处理，跟Flash的回调机制类似，因Java或PHP语言暂时没有回调的机制，所以程序只能顺序执行，这就形成了同步的机制。</p>
-</blockquote></p>
+        <p>排序算法作为最基本的算法设计，最能体现不同算法所带来的不同效率。不过，某些看似效率低的算法在一些特定问题上也会表示的较其他算法优秀。快速排序作为效率较好的排序算法，经常被用来做排序的设计。<br><a id="more"></a><br>快速排序的思想来源于分治策略和递归调用。如果要对一个数组排序，我们可以将数组分解成两个子数组，对两个子数组排序，这种思想跟归并排序一样。不同的是归并排序是按中间一分为二，而后再按大小合并两个子数组，而快速排序则选取数组中的某个值，然后遍历数组，将小于该值的排在该值的左边，大于该值的排在该值的右边，既分治的同时就排好了两个子数组，减少了合并的操作。这就是快速排序优于归并排序的原因。</p>
+<p>下面是快速排序的实现<br><blockquote><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/<strong></strong></span><br><span class="line"> <em> 快速排序</em></span><br><span class="line">  @param a，目标数组</span><br><span class="line"> <em> @return T=N</em>lgN</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(Comparable[] a)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    doQuick(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">doQuick</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(hi &lt;= lo) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> j = partition(a, lo, hi);</span><br><span class="line">    doQuick(a, lo, j-<span class="number">1</span>);</span><br><span class="line">    doQuick(a, j+<span class="number">1</span>, hi);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/</span><br><span class="line"> <em> 确定划分点</em></span><br><span class="line">  @param a，目标数组； lo，hi</span><br><span class="line"> <em> @return 划分点的位置</em></span><br><span class="line"> /</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    Comparable v = a[lo];</span><br><span class="line">    <span class="keyword">int</span> i = lo, j = hi + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(isLess(a[++i], v)) <span class="keyword">if</span>(i == hi) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">while</span>(isLess(v, a[–j])) <span class="keyword">if</span>(j == lo) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(i &gt;= j) <span class="keyword">break</span>;</span><br><span class="line">        exch(a, i, j);</span><br><span class="line">    &#125;</span><br><span class="line">    exch(a, lo, j);</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//比较两个值, @param v，w, @return true：(v &lt; w)</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> boolean <span class="title">isLess</span><span class="params">(Comparable v, Comparable w)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> v.compareTo(w) &lt; <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//交换两个值</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exch</span><span class="params">(Comparable[] a, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    Comparable t = a[i];</span><br><span class="line">    a[i] = a[j];</span><br><span class="line">    a[j] = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote></p>
 
       
     </div>
@@ -356,7 +347,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NodeJS/" rel="tag">#-NodeJS</a>
+            <a href="/tags/算法/" rel="tag">#-算法</a>
           
         </div>
       
@@ -365,17 +356,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/17/first/" rel="next" title="音频，视频">
-                <i class="fa fa-chevron-left"></i> 音频，视频
+              <a href="/2016/04/15/栈(基于链表)/" rel="next" title="栈(基于链表)">
+                <i class="fa fa-chevron-left"></i> 栈(基于链表)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/03/数据存储及位运算/" rel="prev" title="数据存储及位运算">
-                数据存储及位运算 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -401,8 +388,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/03/Node简介/"
-           data-title="Node的优势" data-url="http://yoursite.com/2015/12/03/Node简介/">
+      <div class="ds-thread" data-thread-key="2016/05/21/快速排序/"
+           data-title="快速排序" data-url="http://yoursite.com/2016/05/21/快速排序/">
       </div>
     
   </div>
