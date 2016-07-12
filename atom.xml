@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-03T11:28:15.725Z</updated>
+  <updated>2016-07-12T15:10:34.341Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>十年</title>
+    <link href="http://yoursite.com/2016/07/12/TYear/"/>
+    <id>http://yoursite.com/2016/07/12/TYear/</id>
+    <published>2016-07-12T15:10:02.000Z</published>
+    <updated>2016-07-12T15:10:34.341Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/ten.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/ten.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="-生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="-生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Log4J应用</title>
